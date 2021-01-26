@@ -27,7 +27,7 @@ public class Vehicle {
                 return false;
                 // youl should probably never use console print/read inside of classes
                 // you would use an exception, except we don't know what that is? =(
-                //System.out.println("ERROR BAD THING GAS ALL OVER AHHHH");
+                // System.out.println("ERROR BAD THING GAS ALL OVER AHHHH");
             }
             return true;
         }
@@ -63,11 +63,11 @@ public class Vehicle {
         return gasTankCapacityInGallons;
     }
 
-    public double getActualGasInTank() {
-        return actualGasInTank;
-    }
-
     public double getMilesPerGallonAverage() {
         return milesPerGallonAverage;
+    }
+
+    public double getActualGasInTank() {
+        return actualGasInTank;
     }
 }

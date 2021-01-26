@@ -40,6 +40,7 @@ public class VehicleTest {
         // Assert - did we get what we expected?
         assertEquals(expectedGasInTankInGallons, actualGasInTankInGallons, .000001);
         assertFalse(addGasResult);
+        assertEquals(false, addGasResult);
     }
     
     @Test
