@@ -43,6 +43,15 @@ public class Chapter8Part1 {
         Stonk gamestop = new Stonk("GME", 297);
         Stonk gamestopagain = new Stonk("GME", 297);
         
+        // alias - two variables pointed at the same thing in memory
+        // danger danger danger
+        Stonk anotherCopy = gamestop;
+        
+        // the 'right way' TM
+        Stonk realCopy = new Stonk(gamestop);
+        
+        // using == with objects is bad! 
+        // it only compares if they are the same object in memory
         boolean areEqual = gamestop.equals(gamestopagain);
        
         

@@ -11,6 +11,15 @@ public class Stonk {
         this.symbol = symbol;
         this.value = value;
     }
+    
+    // copy constructor
+    public Stonk(Stonk otherStonk)
+    {
+        // be careful with copies of reference types
+        // strings are safe for this, others are not
+        symbol = otherStonk.symbol;
+        value = otherStonk.value;
+    }
 
     public String getSymbol() {
         return symbol;
