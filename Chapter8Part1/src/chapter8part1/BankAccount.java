@@ -50,4 +50,10 @@ public class BankAccount {
         
     }
     
+    @Override
+    public String toString()
+    {
+        return "Account Owner: " + ownerName + " - Balance: $" + balance;
+    }
+    
 }
