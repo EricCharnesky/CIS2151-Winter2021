@@ -40,6 +40,8 @@ public class VehicleTest {
         // Assert - did we get what we expected?
         assertEquals(expectedGasInTankInGallons, actualGasInTankInGallons, .000001);
         assertFalse(addGasResult);
+        
+        // this is redundant 
         assertEquals(false, addGasResult);
     }
     
