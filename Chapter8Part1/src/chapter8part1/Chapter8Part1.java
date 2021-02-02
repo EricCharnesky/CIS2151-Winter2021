@@ -40,8 +40,8 @@ public class Chapter8Part1 {
         System.out.println(checking.toString());
         
         
-        Stonk gamestop = new Stonk("GME", 297);
-        Stonk gamestopagain = new Stonk("GME", 297);
+        Stonk gamestop = new Stonk("GME", 92.44);
+        Stonk gamestopagain = new Stonk("GME", 92.44);
         
         // alias - two variables pointed at the same thing in memory
         // danger danger danger
@@ -53,9 +53,29 @@ public class Chapter8Part1 {
         // using == with objects is bad! 
         // it only compares if they are the same object in memory
         boolean areEqual = gamestop.equals(gamestopagain);
-       
         
         System.out.println("Does it equal?" + areEqual);
+        
+        
+        Portfolio portfolio = new Portfolio();
+        
+        portfolio.addStonk(gamestop);
+        
+        Stonk amc = new Stonk("AMC", 6.75);
+        
+        portfolio.addStonk(amc);
+        
+        Stonk tesla = portfolio.getStonk("TSLA");
+        if ( tesla != null )
+        {
+            System.out.println("If you owned it, it would be worth " + tesla.getValue());
+        }
+        else{
+            System.out.println("You don't have TSLA in your portfolio");
+        }
+        
+        System.out.println("Total portfolio value: $" + portfolio.getTotalValue());
+        
     }
     
     public static BankAccount createNewAccount(String ownerName)

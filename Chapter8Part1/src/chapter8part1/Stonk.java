@@ -5,11 +5,19 @@ import java.util.Objects;
 public class Stonk {
     private String symbol;
     private double value;
+    private double quantityOwned;
     
     public Stonk(String symbol, double value)
     {
+        // calls the other constructor so we don't have repeated code
+        this(symbol, value, 1);
+    }
+    
+    public Stonk(String symbol, double value, double quantityOwned)
+    {
         this.symbol = symbol;
         this.value = value;
+        this.quantityOwned = quantityOwned;
     }
     
     // copy constructor
