@@ -41,8 +41,7 @@ public class BankAccount {
     
     public boolean withdraw(double moneyToWithdraw)
     {
-        if ( moneyToWithdraw < 0 || moneyToWithdraw > balance)
-        {
+        if (moneyToWithdraw < 0 || moneyToWithdraw > balance) {
             return false;
         }
         balance -= moneyToWithdraw;

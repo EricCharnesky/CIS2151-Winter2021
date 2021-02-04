@@ -27,6 +27,7 @@ public class Stonk {
         // strings are safe for this, others are not
         symbol = otherStonk.symbol;
         value = otherStonk.value;
+        quantityOwned = otherStonk.quantityOwned;
     }
 
     public String getSymbol() {
