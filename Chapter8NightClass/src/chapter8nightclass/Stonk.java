@@ -1,13 +1,25 @@
 package chapter8nightclass;
 
+
 public class Stonk {
 
-    private String symbol;
-    private double value;
+    // immuatble - can't change values
+    private final String symbol;
+    private final double value;
+    private final double quantity;
 
     public Stonk(String symbol, double value) {
+        
+        // used to call another constructors
+        this(symbol, value, 1);
+        
+    }
+    
+    public Stonk(String symbol, double value, double quantity)
+    {
         this.symbol = symbol;
         this.value = value;
+        this.quantity = quantity;
     }
     
     public Stonk(Stonk otherStonk)
@@ -15,6 +27,7 @@ public class Stonk {
         // don't use = to copy reference types - strings are an exception
         this.symbol = otherStonk.symbol;
         this.value = otherStonk.value;
+        this.quantity = otherStonk.quantity;
     }
 
     public String getSymbol() {
@@ -24,6 +37,12 @@ public class Stonk {
     public double getValue() {
         return value;
     }
+
+    public double getQuantity() {
+        return quantity;
+    }
+    
+    
     
     
     @Override

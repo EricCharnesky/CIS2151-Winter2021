@@ -62,6 +62,20 @@ public class Chapter8NightClass {
         // == compares for refernece types - are you the same location in memory
         boolean equalsthirdompare = gamestop.equals(realCopyGameStonk);
         System.out.println("gamestop.equals(realCopyGameStonk) "+ equalsthirdompare);
+        
+        
+        Portfolio portfolio = new Portfolio(("Eric"));
+        portfolio.addStonk(gamestop);
+        
+        Stonk amc = portfolio.getStonk("AMC");
+        if ( amc != null )
+        {
+            System.out.printf("You have %f of %s worth $%.2f\n", 
+                amc.getQuantity(), amc.getSymbol(), amc.getValue() * amc.getQuantity() );
+        } else
+        {
+            System.out.println("You saved a bunch of money not buying meme stock!");
+        }
 
     }
     
