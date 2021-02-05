@@ -77,6 +77,9 @@ public class Chapter8NightClass {
             System.out.println("You saved a bunch of money not buying meme stock!");
         }
 
+        
+        Event cis2151 = new Event(Event.DayOfWeek.THURSDAY, Event.TimeOfDay.EVENING, "CIS2151");
+        
     }
     
     public static BankAccount createAccountWithBonus(String ownerName, String accountType)
@@ -101,6 +104,10 @@ public class Chapter8NightClass {
         } else {
             account.deposit(value);
         }
+        
+        // tell java we're done with it and it can be garbage collected
+        random= null;
+        
     }
 
 }
