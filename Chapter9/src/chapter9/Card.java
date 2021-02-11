@@ -15,7 +15,7 @@ public class Card implements Comparable<Card>{
         return face;
     }
 
-    // returns negative if less than, 0 if equal, positive if great
+    // returns negative if less than, 0 if equal, positive if greater
     @Override
     public int compareTo(Card o) {
         return face - o.face;
