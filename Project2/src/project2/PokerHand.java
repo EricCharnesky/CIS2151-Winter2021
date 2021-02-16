@@ -1,5 +1,7 @@
 package project2;
 
+// sourced from Eric's github, the url won't paste and I don't want to hand type it
+
 import java.util.ArrayList;
 import java.util.Collections;
 
