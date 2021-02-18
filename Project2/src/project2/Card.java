@@ -8,7 +8,7 @@ public class Card implements Comparable<Card> {
         // do the copy constructor thing
     }
 
-    enum Suit { CLUBS, HEARTS, SPADES, DIAMONDS }
+    enum Suit { CLUBS, HEARTS, SPADES, DIAMONDS };
     
     private Suit suit;
 

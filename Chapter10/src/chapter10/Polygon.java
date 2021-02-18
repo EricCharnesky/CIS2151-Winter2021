@@ -5,7 +5,9 @@ import java.util.ArrayList;
 public class Polygon {
 
     private final int numberOfSides;
-    private final ArrayList<Integer> sideLengths;
+    
+    // protected gives access to subclasses
+    protected final ArrayList<Integer> sideLengths;
 
     public Polygon(int numberOfSides) {
         this.numberOfSides = numberOfSides;
@@ -23,6 +25,10 @@ public class Polygon {
         sideLengths.set(sideIndex, length);
     }
 
+    public int getNumberOfSides() {
+        return numberOfSides;
+    }
+    
     public int getSideLength(int sideIndex) {
         if (sideIndex < 0 || sideIndex >= sideLengths.size()) {
             throw new IndexOutOfBoundsException();
