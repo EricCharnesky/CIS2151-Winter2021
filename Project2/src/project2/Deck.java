@@ -11,7 +11,13 @@ public class Deck {
     public Deck() {
         cards = new ArrayList<Card>(52);
         
-        // loops to create all the cards from enums
+        for ( Card.Face face : Card.Face.values() )
+        {
+            for ( Card.Suit suit : Card.Suit.values() )
+            {
+                cards.add(new Card( face, suit));
+            }
+        }
         
         random  = new Random();
     }
