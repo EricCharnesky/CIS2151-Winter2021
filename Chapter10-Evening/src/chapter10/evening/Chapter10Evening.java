@@ -37,7 +37,39 @@ public class Chapter10Evening {
         {
             System.out.println("perimeter of shape " + polygon.getPerimeter());
         }
-
+        
+        
+        Dog dog = new Dog("Fido", "brown", 20);
+        System.out.println(dog.walk());
+        
+        // you can still use polymorphism with interfaces and classes that implement them
+        ArrayList<Moveable> dogWalkerSchedule = new ArrayList<Moveable>();
+        
+        dogWalkerSchedule.add(dog);
+        
+        // can't create instances of Animal diretly - it's abstract
+        
+        
+        Addition addition = new Addition();
+        addition.funWithNumbers(1, 2);
+        
+        // lambda notation for annoymous inner class
+        SomeMath subtraction = (a, b) -> a - b;
+        
+        
+        // can't do with with interfaces with more than one method
+        // Moveable cat = () -> "meow";
+        
+        
+        subtraction.funWithNumbers(2, 4);
+    }
+    
+    static class Addition implements SomeMath
+    {
+        @Override
+        public int funWithNumbers(int a, int b) {
+            return a + b;
+        }
     }
 
 }

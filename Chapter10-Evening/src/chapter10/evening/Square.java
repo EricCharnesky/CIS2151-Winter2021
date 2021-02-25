@@ -28,4 +28,5 @@ public class Square extends Rectangle {
         super.setLength(length);
         super.setWidth(length);
     }
+    
 }

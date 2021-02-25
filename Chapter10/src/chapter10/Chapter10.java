@@ -53,7 +53,7 @@ public class Chapter10 {
 
     }
     
-    
+    // inner class
     class Snore implements Sleep
     {
 

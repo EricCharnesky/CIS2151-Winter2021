@@ -5,7 +5,9 @@ import java.util.ArrayList;
 
 
 public class Polygon {
-    private ArrayList<Integer> sideLengths;
+    
+    // protected means subclasses can access the variable directly
+    protected ArrayList<Integer> sideLengths;
     
     public Polygon(int numberOfSides)
     {

@@ -8,9 +8,20 @@ public class Rectangle extends Polygon {
         super(4); // calls the Polygon constructor
     }
 
+    // overloaded constructors - same name, different arguments
+    public Rectangle(int length, int width) {
+        super(4);
+        setLength(length);
+        setWidth(width);
+    }
+
     public void setWidth(int width) {
+        
         super.setSideLength(1, width);
         super.setSideLength(3, width);
+        
+        // if sidelengths is protected, we have access here
+        sideLengths.set(1, width);
     }
 
     public void setLength(int length) {
@@ -27,7 +38,8 @@ public class Rectangle extends Polygon {
         }
     }
 
-    public int getArea() {
+    // final prevents the method from being overridden
+    public final int getArea() {
         return getSideLength(0) * getSideLength(1);
     }
 
