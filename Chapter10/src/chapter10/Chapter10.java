@@ -32,7 +32,36 @@ public class Chapter10 {
         for (Polygon shape : shapes) {
             System.out.println(shape.getPerimeter());
         }
+        
+        
+        Animal dog = new Dog("Fido", "Golden", 20);
+        System.out.println(dog.makeNoise());
+        
+        Dog otherDog = new Dog("Bingo", "black and white", 50);
+        
+        Sleep quietSleeper = () -> "zzzzzzz";
+        
+        SomeMath multiply = ( first, second) -> first * second;
+        
+        multiply.math(5, 20);
+        
+        // can't use lambda on an interface with more than the 1 method
+        // it's not a 'functional' interface
+        // Pet angryPet = () -> 
+        
+        System.out.println(quietSleeper.sleep());
 
+    }
+    
+    
+    class Snore implements Sleep
+    {
+
+        @Override
+        public String sleep() {
+            return "aaaaaarrrrrrggggggg";
+        }
+        
     }
 
 }
