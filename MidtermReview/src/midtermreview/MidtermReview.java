@@ -1,6 +1,8 @@
 
 package midtermreview;
 
+import java.util.ArrayList;
+
 public class MidtermReview {
 
     
@@ -9,6 +11,17 @@ public class MidtermReview {
         String badlyEncryptedMessage = badEncryptionEveningEdition(message);
         System.out.println(badlyEncryptedMessage);
         //System.out.println(undoBadEncryption(badlyEncryptedMessage));
+        
+        
+        ArrayList<Beverage> beverages = new ArrayList<Beverage>();
+        beverages.add( new Cup("coffee cup", 12));
+        beverages.add( new Mug("coffee mug", 12, "black"));
+        
+        for ( Beverage beverage : beverages )
+        {
+            beverage.fill();
+            System.out.println(beverage.drink(5));
+        }
     }
     
     public static String badEncryption(String message)
@@ -52,4 +65,6 @@ public class MidtermReview {
         
         return new String(letters);
     }
+    
+   
 }
