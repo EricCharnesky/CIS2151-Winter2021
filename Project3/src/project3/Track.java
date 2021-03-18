@@ -12,13 +12,26 @@ public class Track {
     private ArrayList<Item> itemsToPickup; // or add a position attribute to item classes
 
     private ArrayList<Integer> obstacleOnTrack;
+    private final int endPosition;
 
-    public Track(ArrayList<Cart> carts, ArrayList<Bend> bends, ArrayList<Item> itemsToPickup) {
+    public Track(int endPosition, ArrayList<Cart> carts, ArrayList<Bend> bends, ArrayList<Item> itemsToPickup) {
+        this.endPosition = endPosition;
+        
         this.carts = carts; // this is bad form - I didn't ask for copy constructor, so, meh?
         this.bends = bends;
         this.itemsToPickup = itemsToPickup;
 
         obstacleOnTrack = new ArrayList<Integer>();
+    }
+    
+    public boolean isRaceOver()
+    {
+        for ( Cart cart : carts )
+        {
+            if ( cart.getPositionOnTrack() >= endPosition )
+                return true;
+        }
+        return false;
     }
 
     public ArrayList<Cart> getCarts() {
