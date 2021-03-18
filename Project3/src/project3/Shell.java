@@ -1,17 +1,18 @@
 
 package project3;
 
-public class Banana implements Item {
+
+public class Shell implements Item {
 
     private int position;
 
-    public Banana(int position) {
+    public Shell(int position) {
         this.position = position;
     }
-
+    
     @Override
     public void use(Cart cart, Track track) {
-        track.dropObstacleAtLocation(cart);
+        track.shootShell(cart);
     }
     
     @Override

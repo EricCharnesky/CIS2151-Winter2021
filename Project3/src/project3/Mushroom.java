@@ -1,19 +1,20 @@
 
 package project3;
 
-public class Banana implements Item {
+
+public class Mushroom implements Item {
 
     private int position;
 
-    public Banana(int position) {
+    public Mushroom(int position) {
         this.position = position;
     }
-
+    
     @Override
     public void use(Cart cart, Track track) {
-        track.dropObstacleAtLocation(cart);
+        cart.speedBusrt();
     }
-    
+
     @Override
     public int getPositionOnTrack() {
         return position;
