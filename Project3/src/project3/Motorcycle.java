@@ -9,9 +9,10 @@ public class Motorcycle extends Cart {
     }
     
     @Override
-    public void spinOut()
+    public void spinOut(int position)
     {
         lostTurn = true;
+        super.spinOut(position);
     }
     
 }
