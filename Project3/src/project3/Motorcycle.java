@@ -8,4 +8,10 @@ public class Motorcycle extends Cart {
         super(track, maxSpeed + 3, acceleration + 3, breakSpeed + 3);
     }
     
+    @Override
+    public void spinOut()
+    {
+        lostTurn = true;
+    }
+    
 }
