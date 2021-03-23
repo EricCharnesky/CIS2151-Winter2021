@@ -4,8 +4,13 @@ package project3;
 
 public class Motorcycle extends Cart {
     
-    public Motorcycle(int maxSpeed, int acceleration, int breakSpeed) {
-        super(maxSpeed + 3, acceleration + 3, breakSpeed + 3);
+    public Motorcycle(Track track, int maxSpeed, int acceleration, int breakSpeed) {
+        super(track, maxSpeed + 3, acceleration + 3, breakSpeed + 3);
     }
     
+    @Override
+    public void spinOut(int position){
+        lostTurn = true;
+        super.spinOut(position);
+    }
 }
