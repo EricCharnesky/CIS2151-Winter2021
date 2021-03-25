@@ -61,3 +61,5 @@ hs_err_pid*
 /Exceptions/build/
 /Chapter11-Exceptions/nbproject/private/
 /Chapter11-Exceptions/build/
+/Chapter11-FileIO/nbproject/private/
+/Chapter11-FileIO/build/
