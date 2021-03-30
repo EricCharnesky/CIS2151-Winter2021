@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="chapter12.examples.Chapter12FXMLController">
+   <children>
+      <BorderPane layoutX="-2.0" layoutY="-3.0" prefHeight="406.0" prefWidth="606.0">
+         <left>
+            <VBox fx:id="verticalBox" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </left>
+         <top>
+            <HBox fx:id="topBox" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <Label fx:id="bottomTextLabel" text="Bottom Text" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Button mnemonicParsing="false" onAction="#centerButton" text="Click Me" BorderPane.alignment="CENTER" />
+         </center>
+         <right>
+            <Button mnemonicParsing="false" onAction="#rightButon" text="No click me!" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
