@@ -75,3 +75,6 @@ hs_err_pid*
 /Chapter12-MoreExamples/build/
 /EveningGUIHelloWorld/nbproject/private/
 /EveningGUIHelloWorld/build/
+/JavaFX-Controls/nbproject/private/
+/JavaFX-Controls/build/
+/JavaFX-Controls/dist/
