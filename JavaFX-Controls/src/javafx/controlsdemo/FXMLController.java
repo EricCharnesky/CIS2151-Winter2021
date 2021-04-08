@@ -91,7 +91,7 @@ public class FXMLController implements Initializable {
             Parent root = loader.load();
             
             BuyNowFXMLController controller = loader.getController();
-            controller.setValue(Integer.parseInt(textField.getText()));
+            //controller.setValue(Integer.parseInt(textField.getText()));
             
             Scene scene = new Scene(root);
             
