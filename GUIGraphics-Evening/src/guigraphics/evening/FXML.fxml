@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Polygon?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guigraphics.evening.FXMLController">
+   <children>
+      <ImageView fx:id="imageViewLeft" fitHeight="189.0" fitWidth="126.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/cardBack.jpg" />
+         </image>
+         <effect>
+            <Reflection />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="imageViewRight" fitHeight="189.0" fitWidth="126.0" layoutX="192.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/cardBack.jpg" />
+         </image>
+         <effect>
+            <Reflection />
+         </effect>
+      </ImageView>
+      <Button layoutX="140.0" layoutY="205.0" mnemonicParsing="false" onAction="#buttonClick" text="Button" />
+      <Pane fx:id="pane" layoutX="337.0" layoutY="25.0" prefHeight="167.0" prefWidth="139.0" />
+      <Polygon layoutX="511.0" layoutY="335.0" points="-35.5, 33.0, 1.5, 33.0, -16.5, -6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Polygon layoutX="494.0" layoutY="272.0" points="-58.0, 32.5, 54.5, 32.5, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
+      <Arc layoutX="482.0" layoutY="302.0" length="270.0" radiusX="49.0" radiusY="40.0" rotate="-33.7" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+      <Arc layoutX="523.0" layoutY="303.0" length="270.0" radiusX="49.0" radiusY="40.0" rotate="-155.2" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+      <Slider fx:id="hueSlider" blockIncrement="0.1" layoutX="41.0" layoutY="260.0" majorTickUnit="0.25" max="1.0" min="-1.0" minorTickCount="0" prefHeight="38.0" prefWidth="211.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="saturationSlider" blockIncrement="0.1" layoutX="41.0" layoutY="298.0" majorTickUnit="0.25" max="1.0" min="-1.0" minorTickCount="0" prefHeight="38.0" prefWidth="211.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="brigthnessSlider" blockIncrement="0.1" layoutX="41.0" layoutY="338.0" majorTickUnit="0.25" max="1.0" min="-1.0" minorTickCount="0" prefHeight="38.0" prefWidth="211.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="contrastSlider" blockIncrement="0.1" layoutX="41.0" layoutY="385.0" majorTickUnit="0.25" max="1.0" min="-1.0" minorTickCount="0" prefHeight="38.0" prefWidth="211.0" showTickLabels="true" showTickMarks="true" />
+      <Label layoutX="272.0" layoutY="260.0" text="Hue" />
+      <Label layoutX="272.0" layoutY="296.0" text="Saturation" />
+      <Label layoutX="273.0" layoutY="340.0" text="Brightness" />
+      <Label layoutX="271.0" layoutY="385.0" text="Contrast" />
+   </children>
+</AnchorPane>
