@@ -2,6 +2,7 @@
 package gui.graphics;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,10 +23,12 @@ public class FXMLController implements Initializable {
     private ImageView imageViewRight;
     @FXML
     private Pane drawingPane;
+    
+    private ArrayList<String> values;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        values = new ArrayList<String>();
     }    
 
     @FXML
@@ -33,6 +36,8 @@ public class FXMLController implements Initializable {
         // package/image
         Image aceOfSpades = new Image("images/AceOfSpades.png");
         imageViewLeft.setImage(aceOfSpades);
+        
+        values.add("some value");
         
         Rectangle rectangle = new Rectangle();
         rectangle.setX(0);
